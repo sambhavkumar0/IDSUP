@@ -46,6 +46,15 @@ print(number_of_friends_by_id)
 
 
 
+def foaf_ids_bad(user):
+    user_id=user["id"]
+    return [foaf_id
+            for friend_id in friendships[user["id"]]
+            for foaf_id in friendships[friend_id]
+            if foaf_id!=user_id
+            and foaf_id not in friendships[user_id]]
+print(foaf_ids_bad({"id":0,"name":"Hero"}))
+
 
 
 
