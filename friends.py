@@ -28,6 +28,11 @@ print(number_of_friends({"id":0,"name":"Hero"}))
 total_connections=sum(number_of_friends(user) for user in users)
 print(total_connections)
 
+num_users=len(users)
+avg_connections=total_connections/num_users
+
+print(avg_connections)
+
 
 
 
