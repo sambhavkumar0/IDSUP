@@ -34,6 +34,16 @@ avg_connections=total_connections/num_users
 print(avg_connections)
 
 
+number_of_friends_by_id=[(user['id'],number_of_friends(user)) for user in users]
+print(number_of_friends_by_id)
+
+number_of_friends_by_id.sort(
+    key=lambda id_and_friends: id_and_friends[1],reverse=True)
+
+print(number_of_friends_by_id)                         
+
+
+
 
 
 
